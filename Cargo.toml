@@ -1,0 +1,20 @@
+[package]
+name = "knights_tour_rust"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+opt-level = 3
+debug = false
+debug-assertions = false
+overflow-checks = false
+lto = false
+panic = 'abort'
+strip = true
+incremental = false
+codegen-units = 1
+rpath = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]

@@ -1,0 +1,10 @@
+
+[alias]
+rr = "-v run --release"
+
+[build]
+rustflags = [ "-C", "target-cpu=native",
+              "-C", "code-model=large",
+              "-C", "control-flow-guard=no",
+              "-C", "inline-threshold=3500000000",
+              "-C", "passes=mergefunc mergefunc mergefunc memcpyopt mem2reg mem2reg mem2reg inline indvars dse dse dce dce gvn indvars inline instcombine jump-threading loop-deletion loop-extract loop-reduce loop-rotate loop-simplify loop-unroll loop-unroll-and-jam reassociate sroa sccp sink tailcallelim adce adce adce adce argpromotion argpromotion"]
